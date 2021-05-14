@@ -29,6 +29,7 @@ export function getAllPostIds() {
 
 export function getPostData(id) {
     // Combine the data with the id
+
     return {
         id,
         ...outcomes.data,

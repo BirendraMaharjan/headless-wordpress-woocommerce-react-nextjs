@@ -1,4 +1,27 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+#npm run style:lint
+
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+NORMAL='\033[0m'
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+#if [[ "$branch" = "main" || "$branch" = "staging" ]]
+#then
+#  echo -e "${YELLOW} WARNING: Git commit failed. Check below for more details.${NORMAL}"
+#  echo -e "${RED}----${NORMAL}"
+#  echo -e "${RED} ERROR: You can't commit directly to ${branch} branch${NORMAL}"
+#  echo -e "${RED}----${NORMAL}"
+#  echo -e "${GREEN} TIP ( thanks Channing ): run 'git checkout development' to switch branch and copy currently modified files.${NORMAL}"
+#  exit 1
+#else
+#  npm run style:lint
+#fi
+
+echo -e "${YELLOW} Git committed. Check below for more details.${NORMAL}"
 npm run style:lint
+echo -e "${YELLOW} Git committed End.${NORMAL}"
