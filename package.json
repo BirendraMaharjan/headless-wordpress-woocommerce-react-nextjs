@@ -1,36 +1,57 @@
 {
-	"name": "headless-wordprss-woocommerce-react-nextjs",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"classnames": "^2.3.1",
-		"date-fns": "^2.21.3",
-		"next": "^10.2.0",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-hook-form": "^7.5.2",
-		"swr": "^0.5.6",
-		"woocommerce-api": "^1.5.0"
-	},
-	"devDependencies": {
-		"autoprefixer": "^10.2.5",
-		"gray-matter": "^4.0.3",
-		"postcss": "^8.2.15",
-		"sass": "^1.32.12",
-		"tailwindcss": "^2.1.2"
-	},
-	"browserslist": [
-		"last 5 version",
-		"> 1%",
-		"IE 10"
-	]
+    "name": "headless-wordprss-woocommerce-react-nextjs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "style:all": "tsc && npm run style:lint && npm run style:prettier",
+        "style:lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
+        "style:lint:fix": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --fix",
+        "style:prettier": "prettier --check \"./src/**/*.{js,jsx,ts,tsx}\"",
+        "make-pretty": "prettier --write \"./src/**/*.{js,jsx,ts,tsx}\"",
+        "prepare": "husky install",
+        "clean": "rm -rf .next"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BirendraMaharjan/headless-wordpress-woocommerce-react-nextjs.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/BirendraMaharjan/headless-wordpress-woocommerce-react-nextjs/issues"
+    },
+    "homepage": "https://github.com/BirendraMaharjan/headless-wordpress-woocommerce-react-nextjs#readme",
+    "dependencies": {
+        "date-fns": "^2.21.3",
+        "next": "^10.2.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.5",
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0",
+        "autoprefixer": "^10.2.5",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.26.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-airbnb-typescript": "^12.3.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "husky": "^6.0.0",
+        "postcss": "^8.2.15",
+        "prettier": "^2.3.0",
+        "sass": "^1.32.13",
+        "tailwindcss": "^2.1.2",
+        "typescript": "^4.2.4"
+    }
 }

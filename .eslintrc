@@ -1,0 +1,50 @@
+{
+    "root": true,
+    //"parser": "@typescript-eslint/parser",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": ["airbnb-base", "eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        "react/no-danger": "off", // it's self explainatory that no-danger should be used sparingly
+        "react/react-in-jsx-scope": "off", // next.js does not require react in most components
+        "react/prop-types": "off", // as long as TS strict mode is off this is not required
+        "no-console": "error", // no console statements allowed
+        "prettier/prettier": "off", // don't show prettier errors as it will be fixed when saved anyway,
+        "react/no-unescaped-entities": 0,
+        "class-methods-use-this": [
+            "error",
+            {
+                "exceptMethods": [
+                    "render",
+                    "getInitialState",
+                    "getDefaultProps",
+                    "getChildContext",
+                    "componentWillMount",
+                    "componentDidMount",
+                    "componentWillReceiveProps",
+                    "shouldComponentUpdate",
+                    "componentWillUpdate",
+                    "componentDidUpdate",
+                    "componentWillUnmount"
+                ]
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "globals": {
+        "React": "writable"
+    }
+}
