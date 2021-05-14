@@ -9,10 +9,7 @@ const Navigation = () => {
                         Navbar
                     </a>
 
-                    <div
-                        className="collapse navbar-collapse"
-                        id="navbarColor01"
-                    >
+                    <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
                                 <Link href="/">
