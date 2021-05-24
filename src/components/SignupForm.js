@@ -14,7 +14,7 @@ const SignupForm = ({ title }) => {
         <>
             <p className="p-1 mb-2">{title}</p>
             <SuccessMessage />
-            <form className="max-w-sm" onSubmit="">
+            <form className="max-w-sm">
                 <div className={formClass}>
                     <input className={inputClass} type="text" placeholder="Jane Doe" name="email" aria-label="Full name" />
                     <button className={btnClass} disabled={isLoading} type="submit">

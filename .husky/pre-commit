@@ -16,7 +16,7 @@ branch="$(git rev-parse --abbrev-ref HEAD)"
 #  echo -e "${RED}----${NORMAL}"
 #  echo -e "${RED} ERROR: You can't commit directly to ${branch} branch${NORMAL}"
 #  echo -e "${RED}----${NORMAL}"
-#  echo -e "${GREEN} TIP ( thanks Channing ): run 'git checkout development' to switch branch and copy currently modified files.${NORMAL}"
+#  echo -e "${GREEN} TIP ( First ): run 'git checkout development' to switch branch and copy currently modified files.${NORMAL}"
 #  exit 1
 #else
 #  npm run style:lint
